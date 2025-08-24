@@ -1,9 +1,14 @@
-import os
-import pandas as pd
-import requests, zipfile, io
 import datetime
+import os
+
+import io
+import pandas as pd
+import requests
+import zipfile
 from pandas import DataFrame
-from workflows.constants import RENAME_COLUMNS, MARKETS_TO_KEEP, MARKET_NAME_MAP, MARKET_TYPE
+
+from workflows.cot.cot_constants import RENAME_COLUMNS, MARKETS_TO_KEEP, MARKET_NAME_MAP, \
+    MARKET_TYPE
 
 NOW: datetime = datetime.datetime.now()
 CURRENT_YEAR: int = NOW.year

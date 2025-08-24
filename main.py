@@ -21,9 +21,16 @@ pip_calc_page = st.Page(
     default=False
 )
 
+compound_interest_page = st.Page(
+    page="views/compound_interest_view.py",
+    title="Compound Interest",
+    icon="📈",
+    default=False
+)
+
 pg = st.navigation({
     "Financials": [cot_page, trade_tracker_page],
-    "Tools": [pip_calc_page]
+    "Tools": [pip_calc_page, compound_interest_page]
 })
 
 st.set_page_config(

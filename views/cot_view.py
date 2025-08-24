@@ -1,7 +1,7 @@
 import streamlit as st
-from components.cot_data_components import plot_market_net_position, plot_latest_date_overview
 
-from workflows.cot_data import get_final_parsed_data_no_prev, update_final_parsed_data
+from components.cot_data_components import plot_market_net_position, plot_latest_date_overview
+from workflows.cot.cot_data import get_final_parsed_data_no_prev, update_final_parsed_data
 
 df = get_final_parsed_data_no_prev("data/final_cot_data.csv")
 
