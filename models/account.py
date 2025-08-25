@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
-from base import Base
+from .base import Base
 
 class Account(Base):
     __tablename__ = "accounts"

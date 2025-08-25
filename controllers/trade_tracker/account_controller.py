@@ -1,5 +1,6 @@
-from ..models.base import SessionLocal
-from ..models.account import Account
+from models.account import Account
+from models.base import SessionLocal
+
 
 class AccountController:
     def __init__(self):

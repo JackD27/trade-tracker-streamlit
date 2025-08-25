@@ -1,5 +1,5 @@
-from ..models.base import SessionLocal
-from ..models.security import Security
+from models.base import SessionLocal
+from models.security import Security
 
 class SecurityController:
     def __init__(self):

@@ -1,7 +1,9 @@
+from datetime import datetime
+
 from sqlalchemy import Column, Integer, Float, ForeignKey, DateTime, String
 from sqlalchemy.orm import relationship
-from base import Base
-from datetime import datetime
+
+from .base import Base
 
 class Trade(Base):
     __tablename__ = "trades"
@@ -11,6 +13,7 @@ class Trade(Base):
     security_id = Column(Integer, ForeignKey("securities.id"))
     entry_price = Column(Float, nullable=False)
     exit_price = Column(Float, nullable=False)
+    fees = Column(Float, default=0.0, nullable=False)
     quantity = Column(Integer, nullable=False)
     entry_date = Column(DateTime, default=datetime.utcnow)
     exit_date = Column(DateTime, nullable=True)
